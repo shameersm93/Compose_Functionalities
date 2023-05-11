@@ -9,67 +9,94 @@ public class Pom1 {
 	
 	public static WebDriver driver;
 	
+	@FindBy(xpath = "//textarea[@role='combobox']")
+	private WebElement Searchbox;
+	
+	@FindBy(xpath = "//h3[text()= 'Sign in - Google Accounts']")
+	private WebElement GmailLogin;
+	
 	@FindBy(xpath = "//input[@type='email']")
-	private WebElement Username;
+	private WebElement UserName;
 	
 	@FindBy(xpath = "//input[@type='password']")
 	private WebElement Password;
 	
-	@FindBy(xpath = "//a[@aria-label='Google apps']")
-	private WebElement GoogleApps;
 	
-	@FindBy(xpath = "(//span[@class='MrEfLc'])[10]")
-	private WebElement Gmail;
 	
-	//@FindBy(xpath = "//div[text()='Compose']")
-	//private WebElement Compose;
+	@FindBy(xpath = "//textarea[@role='combobox']")
+	private WebElement SearchGmail;
 	
-	//@FindBy(xpath = "//div[@id=':qf']")
-	//private WebElement MessageBody;
+	@FindBy(xpath = "//h3[text()='Gmail: Private and secure email at no cost']")
+	private WebElement ClickGooglemail;
+
 	
-//	@FindBy(xpath = "//Input[@name='subjectbox']")
-	//private WebElement Subject;
+	@FindBy(xpath = "//a[text()='Sign in']")
+	private WebElement SelectSignIn;
+	
+	@FindBy(xpath = "//div[text()='software Tester']")
+	private WebElement User;
+	
+	
+	@FindBy(xpath = "(//div[@role='button'])[7]")
+	private WebElement ComposeMail;
+	
+	@FindBy(xpath = "//div[@role='textbox']")
+	private WebElement MessageBody;
+	
+	@FindBy(xpath = "//input[@name='subjectbox']")
+	private WebElement MessageSubject;
 
 	public Pom1(WebDriver driver2) {
-		this.driver = driver2;
-		PageFactory.initElements(driver2, this);
+	this.driver = driver2;
+	PageFactory.initElements(driver2, this);
+	
 	}
 
-	public WebElement getUsername() {
-		return Username;
+	public WebElement getSearchbox() {
+		return Searchbox;
 	}
 
-	public void setUsername(WebElement username) {
-		Username = username;
+	public WebElement getGmailLogin() {
+		return GmailLogin;
+	}
+
+	public WebElement getUserName() {
+		return UserName;
 	}
 
 	public WebElement getPassword() {
 		return Password;
 	}
 
-	public void setPassword(WebElement password) {
-		Password = password;
+	public WebElement getSearchGmail() {
+		return SearchGmail;
 	}
 
-	public WebElement getGoogleApps() {
-		return GoogleApps;
+	public WebElement getClickGooglemail() {
+		return ClickGooglemail;
 	}
 
-	public void setGoogleApps(WebElement googleApps) {
-		GoogleApps = googleApps;
-	}
-
-	public WebElement getGmail() {
-		return Gmail;
-	}
-
-	public void setGmail(WebElement gmail) {
-		Gmail = gmail;
+	public WebElement getSelectSignIn() {
+		return SelectSignIn;
 	}
 
 
-	
-	
+
+	public WebElement getUser() {
+		return User;
+	}
+
+	public WebElement getComposeMail() {
+		return ComposeMail;
+	}
+
+	public WebElement getMessageBody() {
+		return MessageBody;
+	}
+
+	public WebElement getMessageSubject() {
+		return MessageSubject;
+	}
 	
 	
 }
