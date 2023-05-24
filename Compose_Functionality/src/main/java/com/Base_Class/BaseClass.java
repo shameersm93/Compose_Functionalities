@@ -30,12 +30,12 @@ public class BaseClass {
 				driver = new ChromeDriver();
 				WebDriverManager.chromedriver().setup();
 
-			} else if (browsername.equalsIgnoreCase("ie")) {
+			/*} else if (browsername.equalsIgnoreCase("ie")) {
 				System.setProperty("webdriver.ie.driver",
 						"C:\\Users\\Lenovo\\eclipse-workspace\\Cproject1\\Driver\\chromedriver.exe");
-				// driver = new InternetExplorerDriver();
-				// WebDriverManager.chromedriver().setup();
-
+				driver = new InternetExplorerDriver();
+				 WebDriverManager.chromedriver().setup();
+*/
 			} else {
 				System.out.println("Invalid Browser");
 			}
