@@ -9,11 +9,8 @@ public class Pom1 {
 	
 	public static WebDriver driver;
 	
-	@FindBy(xpath = "//textarea[@role='combobox']")
-	private WebElement Searchbox;
-	
-	@FindBy(xpath = "//h3[text()= 'Sign in - Google Accounts']")
-	private WebElement GmailLogin;
+	@FindBy(xpath="//a[@class='gb_ma gb_id gb_Md gb_1d']")
+	private WebElement LoginGmail;
 	
 	@FindBy(xpath = "//input[@type='email']")
 	private WebElement UserName;
@@ -21,7 +18,8 @@ public class Pom1 {
 	@FindBy(xpath = "//input[@type='password']")
 	private WebElement Password;
 	
-	
+	@FindBy(xpath = "(//div[@jsname='EBHGs'])[1]")
+	private WebElement MsgVerify;
 	
 	@FindBy(xpath = "//textarea[@role='combobox']")
 	private WebElement SearchGmail;
@@ -52,13 +50,13 @@ public class Pom1 {
 	
 	}
 
-	public WebElement getSearchbox() {
-		return Searchbox;
+	
+
+	public WebElement getLoginGmail() {
+		return LoginGmail;
 	}
 
-	public WebElement getGmailLogin() {
-		return GmailLogin;
-	}
+
 
 	public WebElement getUserName() {
 		return UserName;
@@ -67,6 +65,13 @@ public class Pom1 {
 	public WebElement getPassword() {
 		return Password;
 	}
+
+	
+	public WebElement getMsgVerify() {
+		return MsgVerify;
+	}
+
+
 
 	public WebElement getSearchGmail() {
 		return SearchGmail;

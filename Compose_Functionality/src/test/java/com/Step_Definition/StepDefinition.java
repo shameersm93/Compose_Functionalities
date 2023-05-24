@@ -19,21 +19,15 @@ public class StepDefinition extends BaseClass {
 	  
 	}
 
-	@When("the user Opens the Gmail")
-	public void the_user_opens_the_gmail() {
-	   Sendkeys(p1.getSearchbox(), "Gmail Login"+ Keys.ENTER);
-	}
-
-	@When("the user click on the Open mail")
-	public void the_user_click_on_the_open_mail() {
-		Click(p1.getGmailLogin());
-	   
+	@Given("the user click on the SignIn mail")
+	public void the_user_click_on_the_sign_in_mail() {
+	   Click(p1.getLoginGmail());
 	}
 
 	@When("the user enters the username")
 	public void the_user_enters_the_username() throws InterruptedException {
 		Sendkeys(p1.getUserName(), "Composeincubyte23"+Keys.ENTER);
-		Thread.sleep(8000);
+		Thread.sleep(6000);
 	}
 	
 	
@@ -44,6 +38,14 @@ public class StepDefinition extends BaseClass {
 	   Thread.sleep(3000);
 	   
 	}
+	
+	@When("user sets a Verification method")
+	public void user_sets_a_verification_method() throws InterruptedException {
+	    Click(p1.getMsgVerify());
+	    Thread.sleep(9000);
+	    
+	}
+	
 	
 	@When("the user navigate to GooglePage")
 	public void the_user_navigate_to_google_page() {

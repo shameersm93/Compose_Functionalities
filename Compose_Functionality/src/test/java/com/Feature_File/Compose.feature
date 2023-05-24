@@ -2,10 +2,10 @@ Feature: Gmail Compose Functionality
 
 Scenario: Checking the Compose Functionality in Gmail
 Given user Opens the Google Page
-When the user Opens the Gmail
-And the user click on the Open mail 
+And the user click on the SignIn mail 
 And the user enters the username
 And the user enters the password
+And user sets a Verification method
 And the user navigate to GooglePage
 And the user searches on googlemail 
 And the user click on SignIn
