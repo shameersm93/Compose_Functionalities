@@ -82,7 +82,7 @@ public class StepDefinition extends BaseClass {
 	@When("the user wants to type a messaage in the Body")
 	public void the_user_wants_to_type_a_messaage_in_the_body() throws InterruptedException {
 	  Sendkeys(p1.getMessageBody(), "Automation QA test for Incubyte");
-	    Thread.sleep(4000);
+	    Thread.sleep(3000);
 
 	}
 
@@ -90,6 +90,7 @@ public class StepDefinition extends BaseClass {
 	public void the_user_wants_to_add_a_subject_to_the_message() {
 	 Sendkeys(p1.getMessageSubject(), "Incubyte");  
 	}
+
 
 	@Then("user check the result")
 	public void user_check_the_result() {
